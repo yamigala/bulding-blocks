@@ -1,0 +1,13 @@
+<input type="text" [(ngModel)]="searchText">
+<table>
+  <tr>
+    <th>name</th>
+  </tr>
+  <tr *ngFor="let d of data|search:searchText">
+    {{d}}
+  </tr>
+</table>
+<button type="save">save</button>
+<app-home-details [homes]='data' (saveclicked)='onSaveClick($event)'>
+
+</app-home-details>
